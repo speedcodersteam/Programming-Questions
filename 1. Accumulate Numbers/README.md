@@ -1,5 +1,4 @@
-# 
-
+# Accumulate Numbers
 
 ### Difficulty: Easy  
 
@@ -14,7 +13,7 @@
 
 
 ## Sample Input - Output
-![](outputs.png)
+![](outputs.jpeg)
 
 ## Important
 Feel free to use any programming language. (Eg: **Java** or **C++**)  

@@ -1,16 +1,18 @@
 # Accumulate Numbers
 
 ### Difficulty: Easy  
-
+Write a program that takes a string as the input, and calculates the digit sum **A** of all the digits in that string.  
+Take a look at the sample input - output to get the gist.  
 
 ## Input Format
-
+A string. It may contain any number of characters.  
 
 ## Constraints
-
+**A** < 10  
+**A** must be an integer.  
 
 ## Output Format
-
+Print the digit sum of all the digits in the input string. 
 
 ## Sample Input - Output
 ![](outputs.jpeg)

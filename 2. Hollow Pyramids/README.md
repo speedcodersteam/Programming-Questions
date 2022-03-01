@@ -1,7 +1,12 @@
-# 
-
+# Hollow Pyramids
 
 ### Difficulty: Easy  
+Create a star pattern of two hollow pyramids. You must use loops. 
+
+*******  
+ \*   \*  
+  \* \*  
+   \*   
 
 
 ## Input Format

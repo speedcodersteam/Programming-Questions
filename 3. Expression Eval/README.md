@@ -20,6 +20,7 @@ Print out the result. It should be a number, which may or may not have a decimal
 
 ## Sample Input - Output
 ![](outputs.png)
+<h2> On the way.... </h2>
 
 ## Important
 Feel free to use any programming language. 

@@ -5,16 +5,18 @@
 Write a computer program, that can evaluate any given (basic) mathematical expression. It should be able to read the expression from the user, evaluate it, and print the output.  
 
 ## Input Format
-
-
-## Constraints
 The input string should only contain  
 1. Numbers
 2. Basic mathematical operators ( **+ - / \***)
 3. Brackets of type **()**
+4. The numbers can have decimal values.
+
+## Constraints
+1. The expression must not contain any operation other than **+ - / \*** . 
+2. All the numbers should be decimal and real. 
 
 ## Output Format
-
+Print out the result. It should be a number, which may or may not have a decimal part. 
 
 ## Sample Input - Output
 ![](outputs.png)

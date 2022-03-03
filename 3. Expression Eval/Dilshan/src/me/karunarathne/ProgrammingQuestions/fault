@@ -1,0 +1,53 @@
+package me.karunarathne.ProgrammingQuestions ;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Scanner;
+import java.util.Stack;
+
+public class Eval {
+    private static Stack <Character> mainStack = null ;
+    private static Stack <Character> removeThisStack ;  //TODO
+
+    public static void main(String[] args) {
+        mainStack = new Stack <> () ;
+        removeThisStack = new Stack <> () ;   //TODO
+
+        while (true) {
+            if (! mainLoop ()) break ;
+        }
+    }
+
+    private static boolean mainLoop() {
+        if (! populateMainStack ()) return false ;
+        transformToPostFix () ;
+        evaluateExp () ;
+        return true ;
+    }
+
+    private static void transformToPostFix() {
+    }
+
+    private static void evaluateExp() {
+    }
+
+    private static boolean populateMainStack () {
+        System.out.print ("Enter your expression (Q to quit) >  ") ;
+        String input = null ;
+        try (Scanner scanner = new Scanner (System.in)) {
+            input = scanner.nextLine() ;
+        }
+
+        if (input.equalsIgnoreCase("q")) return false ;
+
+        reverseAndPopulate (input) ;
+
+        return true ;
+    }
+
+    private static void reverseAndPopulate (String input) {   //TODO
+        char [] characters = input.toCharArray() ;
+        Collections.reverse (Arrays.asList (characters));
+        for (char c: characters) removeThisStack.add(c) ;
+    }
+}

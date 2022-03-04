@@ -30,9 +30,9 @@ public class Eval {
     }
 
     private static void evaluateExp(String expression) {
-        // System.out.println(expression);
-        PostfixSolver solver = new PostfixSolver (expression) ;
-        System.out.println (solver.evaluate()) ;
+        System.out.println(expression);
+        // PostfixSolver solver = new PostfixSolver (expression) ;
+        // System.out.println (solver.evaluate()) ;
     }
 
     private static String queryUser () {

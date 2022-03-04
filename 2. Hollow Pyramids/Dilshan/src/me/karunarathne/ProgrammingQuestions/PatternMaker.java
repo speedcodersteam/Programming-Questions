@@ -1,4 +1,4 @@
-package me.karunarathne ;
+package me.karunarathne.ProgrammingQuestions ;
 
 import java.util.Stack;
 

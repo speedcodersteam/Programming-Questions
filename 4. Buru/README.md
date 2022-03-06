@@ -7,10 +7,10 @@ The game is simple. First, the card pack needs to be shuffled, and divided into 
 ♠ ♡ ♣ ♢ 
 
 ## Input Format
-The player should be prompted to input a desired playing card. 
+The player should be prompted to input a desired playing card.  
+First, let the player choose a suit. And then ask the player to choose a card. 
 
 ## Constraints
-
 1. The card pack, should contain all four suits.  
 >(Clubs ♣, Diamonds ♢, Hearts ♡ and Spades ♠)
 2. Each suit should contain all thirteen cards.   
@@ -19,7 +19,8 @@ The player should be prompted to input a desired playing card.
 4. 
 
 ## Output Format
-
+If the player wins, print out `You won` .  
+If the opponent wins, print out `You lost` .
 
 ## Sample Input - Output
 On the way....

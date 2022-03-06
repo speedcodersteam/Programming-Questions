@@ -50,6 +50,14 @@ public class Card {
 
         return ascii.replace ("@", rank.toString()).replace("#", suit.toString()) ;
     }
+
+    @Override
+    public boolean equals (Object obj) {
+        if (! obj.getClass().equals(Card.class)) return false ;
+
+        Card theOther = (Card) obj ;
+        return this.rank == theOther.rank && this.suit == theOther.suit ;
+    }
 }
 
 enum Suit {

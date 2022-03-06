@@ -45,9 +45,11 @@ public class Buru {
     private static boolean check (Card selectedCard) {
         int flag = 1 ;
         for (Card card: deck) {
-            System.out.println (card) ;
             flag ++ ;
-            return (card.equals(selectedCard) && isOdd (flag)) ;
+            if (isOdd (flag)) {
+                System.out.println (card) ;
+                if ( card.equals ( selectedCard )) return true ;
+            }
         }
         return false ;
     }

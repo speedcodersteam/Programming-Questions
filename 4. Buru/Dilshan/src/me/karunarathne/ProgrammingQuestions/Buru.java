@@ -1,12 +1,12 @@
 package me.karunarathne.ProgrammingQuestions ;
 
-import java.util.Arrays;
-import java.util.Collections;
+import java.util.* ;
 
 public class Buru {
-    private static Card [] deck ;
 
     public static void main(String[] args) {
-        deck = Collections.shuffle ( Arrays.asList( Card.createDeck())) ;
+        ArrayList <Card> deck = Card.createDeck() ;
+        
+        
     }
 }

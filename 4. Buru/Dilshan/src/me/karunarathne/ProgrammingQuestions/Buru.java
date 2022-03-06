@@ -16,6 +16,7 @@ public class Buru {
     }
 
     public static void play () {
+        
         try {
             scanner = new Scanner(System.in);
             deck = Card.createDeck();
@@ -33,22 +34,27 @@ public class Buru {
     private static boolean mainLoop ()  {
         Collections.shuffle (deck) ;
 
-        System.out.println ("Select a card") ;
+        println ("Select a card", PrintColor.BLUE) ;
 
         String result = check ( cardSelector ()) ? "You won !" : "You lost !" ;
-        System.out.println ("\n\t" + result) ;
+        println ("\t" + result, PrintColor.PURPLE) ;
 
-        System.out.print ("Would you like to play again (Y/N) > ") ;
+        print ("\nWould you like to play again (Y/N) > ", PrintColor.BLUE) ;
         return ! scanner.nextLine().equalsIgnoreCase("n");
     }
 
     private static boolean check (Card selectedCard) {
         int flag = 1 ;
+        println ("\n\tLet's Play... ", PrintColor.PURPLE) ;
+        println ("\tYour card will appear in GREEN", PrintColor.GREEN) ;
+        println ("\tYour opponent's card will appear in RED\n", PrintColor.RED) ;
         for (Card card: deck) {
             flag ++ ;
             if (isOdd (flag)) {
-                System.out.println (card) ;
+                println (card.toString(), PrintColor.GREEN) ;
                 if ( card.equals ( selectedCard )) return true ;
+            } else {
+                println (card.toString(), PrintColor.RED) ;
             }
         }
         return false ;
@@ -59,56 +65,22 @@ public class Buru {
     }
 
     private static Card cardSelector() {
-        System.out.println ("""
-                \tS - Spades ♠\t\tD - Diamonds ♢
-                \tC - Clubs ♣\t\tH - Hearts ♡
-                    """) ;
-        System.out.print ("\tSelect Suite > ") ;
+        println ("\tS - Spades ♠\t\tD - Diamonds ♢\tC - Clubs ♣\t\tH - Hearts ♡", PrintColor.GREEN) ;
+        print ("\tSelect Suite > ", PrintColor.CYAN) ;
         String suite = scanner.nextLine() ;
 
-        System.out.println ("A, K, Q, J, 10, 9 ... 2") ;
-        System.out.print ("\tSelect Rank > ") ;
+        println ("\tA, K, Q, J, 10, 9 ... 2", PrintColor.GREEN) ;
+        print ("\tSelect Rank > ", PrintColor.CYAN) ;
         String rank = scanner.nextLine() ;
 
         return new Card (findSuite (suite), findRank (rank) ) ;
     }
-}
 
-class Finder {
-    public static Rank findRank (String keyword) {
-        return Rank.valueOf ( getRank ( keyword.toUpperCase ()) ) ;
+    private static void println (String stuff, String color) {
+        System.out.println (color + stuff) ;
     }
 
-    private static String getRank (String rankString) {
-        return switch (rankString) {
-            case "A" -> "Ace";
-            case "K" -> "King";
-            case "Q" -> "Queen";
-            case "J" -> "Jack";
-            case "10" -> "Ten";
-            case "9" -> "Nine";
-            case "8" -> "Eight";
-            case "7" -> "Seven";
-            case "6" -> "Six";
-            case "5" -> "Five";
-            case "4" -> "Four";
-            case "3" -> "Three";
-            case "2" -> "Two";
-            default -> null;
-        };
-    }
-
-    public static Suit findSuite (String keyword) {
-        return Suit.valueOf( getSuite ( keyword.toUpperCase () )) ;
-    }
-
-    private static String getSuite (String suiteLetter) {
-        return switch ( suiteLetter.charAt (0) ) {
-            case 'C', 'c' -> "Clubs";
-            case 'D', 'd' -> "Diamonds";
-            case 'H', 'h' -> "Hearts";
-            case 'S', 's' -> "Spades";
-            default -> "";
-        } ;
+    private static void print (String stuff, String color) {
+        System.out.print (color + stuff);
     }
 }

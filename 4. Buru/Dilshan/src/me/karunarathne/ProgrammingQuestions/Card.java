@@ -60,6 +60,45 @@ public class Card {
     }
 }
 
+class Finder {
+    public static Rank findRank (String keyword) {
+        return Rank.valueOf ( getRank ( keyword.toUpperCase ()) ) ;
+    }
+
+    private static String getRank (String rankString) {
+        return switch (rankString) {
+            case "A" -> "Ace";
+            case "K" -> "King";
+            case "Q" -> "Queen";
+            case "J" -> "Jack";
+            case "10" -> "Ten";
+            case "9" -> "Nine";
+            case "8" -> "Eight";
+            case "7" -> "Seven";
+            case "6" -> "Six";
+            case "5" -> "Five";
+            case "4" -> "Four";
+            case "3" -> "Three";
+            case "2" -> "Deuce";
+            default -> null;
+        };
+    }
+
+    public static Suit findSuite (String keyword) {
+        return Suit.valueOf( getSuite ( keyword.toUpperCase () )) ;
+    }
+
+    private static String getSuite (String suiteLetter) {
+        return switch ( suiteLetter.charAt (0) ) {
+            case 'C', 'c' -> "Clubs";
+            case 'D', 'd' -> "Diamonds";
+            case 'H', 'h' -> "Hearts";
+            case 'S', 's' -> "Spades";
+            default -> "";
+        } ;
+    }
+}
+
 enum Suit {
     Clubs ("♣"), Diamonds ("♢"), Hearts ("♡"), Spades ("♠") ;
 

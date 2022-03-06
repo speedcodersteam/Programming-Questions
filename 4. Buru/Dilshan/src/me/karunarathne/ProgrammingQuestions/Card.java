@@ -27,8 +27,16 @@ public class Card {
     }
 
     private String generateString () {
-        String ascii = "" ;
-        if (rank == Rank.Ten) {
+        String ascii = """
+        ┌─────────┐
+        | @       |
+        |         |
+        |    #    |
+        |         |
+        |       @ |
+        └─────────┘
+                """ ;
+        if (rank.equals(Rank.Ten)) {
             ascii = """
         ┌─────────┐
         | 10      |
@@ -38,32 +46,16 @@ public class Card {
         |      10 |
         └─────────┘
                 """ ;
-        } else {
-            ascii = """
-        ┌─────────┐
-        | @       |
-        |         |
-        |    #    |
-        |         |
-        |       @ |
-        └─────────┘
-                """ ;
-            ascii.replace("@", rank.toString()) ;
         }
 
-        return ascii.replace("#", suit.toString()) ;
-    }
-
-    private String getLabel() {
-        if (rank == Rank.Ten) return "10" ;
-        return " " + rank.toString() ;
+        return ascii.replace ("@", rank.toString()).replace("#", suit.toString()) ;
     }
 }
 
 enum Suit {
     Clubs ("♣"), Diamonds ("♢"), Hearts ("♡"), Spades ("♠") ;
 
-    String value ;
+    final String value ;
 
     Suit (String value) {
         this.value = value ;
@@ -80,7 +72,7 @@ enum Rank {
     Ten ("10") , Nine ("9"), Eight ("8"), Seven ("7"), 
     Six ("6"), Five ("5"), Four ("4"), Three ("3"), Deuce ("2") ;
 
-    String value ;
+    final String value ;
 
     Rank (String value) {
         this.value = value ;

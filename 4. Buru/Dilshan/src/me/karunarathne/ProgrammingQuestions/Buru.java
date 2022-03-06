@@ -2,6 +2,7 @@ package me.karunarathne.ProgrammingQuestions ;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Buru {
@@ -27,20 +28,54 @@ public class Buru {
         }
     }
 
-    private static boolean mainLoop () throws Exception {
+    private static boolean mainLoop ()  {
         Collections.shuffle (deck) ;
 
         System.out.println ("Select a card") ;
-        Card selectedCard = cardSelector () ;
+
+        String result = check ( cardSelector ()) ? "You won !" : "You lost !" ;
+        System.out.println ("\n\t" + result) ;
 
         System.out.print ("Would you like to play again (Y/N) > ") ;
         return ! scanner.nextLine().equalsIgnoreCase("n");
     }
 
+    private static boolean check (Card selectedCard) {
+        int flag = 1 ;
+        for (Card card: deck) {
+            System.out.println (card) ;
+            flag ++ ;
+            return (card.equals(selectedCard) && isOdd (flag)) ;
+        }
+        return false ;
+    }
+
+    private static boolean isOdd (int number) {
+        return number % 2 == 0 ;
+    }
+
     private static Card cardSelector() {
-        System.out.println ("\n\tS - Spades ♠\t\tD - Diamonds ♢\n" +
-                            "\tC - Clubs ♣\t\tH - Hearts ♡") ;
+        System.out.println ("""
+                \tS - Spades ♠\t\tD - Diamonds ♢
+                \tC - Clubs ♣\t\tH - Hearts ♡
+                    """) ;
         System.out.print ("\tSelect Suite > ") ;
-        scanner.nextLine() ;
+        String suite = scanner.nextLine() ;
+
+        System.out.println ("A, K, Q, J, 10, 9 ... 2") ;
+        System.out.print ("\tSelect Rank > ") ;
+        String rank = scanner.nextLine() ;
+
+        return new Card (Suit.valueOf(suite.toUpperCase()), Rank.valueOf( getValue(rank) )) ;
+    }
+
+    private static String getValue (String rank) {
+        return switch ( rank.charAt (0) ) {
+            case 'C', 'c' -> "♣";
+            case 'D', 'd' -> "♢";
+            case 'H', 'h' -> "♡";
+            case 'S', 's' -> "♠";
+            default -> "";
+        } ;
     }
 }

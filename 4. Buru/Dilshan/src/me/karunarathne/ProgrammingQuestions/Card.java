@@ -1,5 +1,8 @@
 package me.karunarathne.ProgrammingQuestions;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Card {
     Suit suit ;
     Rank rank ;
@@ -9,13 +12,11 @@ public class Card {
         this.rank = rank ;
     } 
 
-    public static Card [] createDeck () {
-        Card [] deck = new Card [52] ;
-        int counter = 0 ;
+    public static List <Card> createDeck () {
+        List <Card> deck = new ArrayList <> () ;
         for (Suit suit: Suit.values()) {
             for (Rank rank: Rank.values()) {
-                deck [counter] = new Card (suit, rank) ;
-                counter ++ ;
+                deck.add( new Card (suit, rank)) ; 
             }
         }
         return deck ;

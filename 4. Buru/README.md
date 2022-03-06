@@ -16,7 +16,6 @@ First, let the player choose a suit. And then ask the player to choose a card.
 2. Each suit should contain all thirteen cards.   
 >(Ace **A**, King **K**, Queen **Q**, Jack **J**, Ten **10**, Nine **9**, Eight **8**, Seven **7**, Six **6**, Five **5**, Four **4**, Three **3** and Deuce **2**)
 3. The shuffling must be random. (You are allowed to use the built in functions)
-4. 
 
 ## Output Format
 If the player wins, print out `You won` .  

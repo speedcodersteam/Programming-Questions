@@ -29,7 +29,7 @@ On the way....
 ## Important
 Feel free to use any programming language. 
 > Eg: **Java** or **C++**  
-<br>
+
 If the user's input is not correct, you should throw an exception. For those who are unfamiliar with exception handling, just print an Error message.  
 
 #### This question was created by

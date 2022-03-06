@@ -26,7 +26,7 @@ public class Card {
         //         """ +
         //     "|       " + getLabel () + "|\n└─────────┘ ";
 
-        return """
+        String ascii = """
         ┌─────────┐
         | ##      |
         |         |
@@ -34,7 +34,8 @@ public class Card {
         |         |
         |      ## |
         └─────────┘
-                """.replace("#", suit) ;
+                """ ;
+        return ascii.replace("#", suit.toString()).replace("##", getLabel()) ;
     }
 
     private String getLabel() {
@@ -48,7 +49,7 @@ enum Suit {
 
     String value ;
 
-    Rank(String value) {
+    Suit (String value) {
         this.value = value ;
     }
 
@@ -65,7 +66,7 @@ enum Rank {
 
     String value ;
 
-    Rank(String value) {
+    Rank (String value) {
         this.value = value ;
     }
 

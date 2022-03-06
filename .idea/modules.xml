@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/1. Accumulate Numbers/1. Accumulate Numbers.iml" filepath="$PROJECT_DIR$/1. Accumulate Numbers/1. Accumulate Numbers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2. Hollow Pyramids/2. Hollow Pyramids.iml" filepath="$PROJECT_DIR$/2. Hollow Pyramids/2. Hollow Pyramids.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3. Expression Eval/3. Expression Eval.iml" filepath="$PROJECT_DIR$/3. Expression Eval/3. Expression Eval.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4. Buru/4. Buru.iml" filepath="$PROJECT_DIR$/4. Buru/4. Buru.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Programming-Questions.iml" filepath="$PROJECT_DIR$/.idea/Programming-Questions.iml" />
+    </modules>
+  </component>
+</project>

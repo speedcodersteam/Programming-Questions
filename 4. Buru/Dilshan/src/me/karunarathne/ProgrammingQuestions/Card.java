@@ -27,16 +27,31 @@ public class Card {
     }
 
     private String generateString () {
-        String ascii = """
+        String ascii = "" ;
+        if (rank == Rank.Ten) {
+            ascii = """
         ┌─────────┐
-        | ##      |
+        | 10      |
         |         |
         |    #    |
         |         |
-        |      ## |
+        |      10 |
         └─────────┘
                 """ ;
-        return ascii.replace("#", suit.toString()).replace("##", getLabel()) ;
+        } else {
+            ascii = """
+        ┌─────────┐
+        | @       |
+        |         |
+        |    #    |
+        |         |
+        |       @ |
+        └─────────┘
+                """ ;
+            ascii.replace("@", rank.toString()) ;
+        }
+
+        return ascii.replace("#", suit.toString()) ;
     }
 
     private String getLabel() {

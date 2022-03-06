@@ -41,5 +41,6 @@ public class Buru {
         System.out.println ("\n\tS - Spades ♠\t\tD - Diamonds ♢\n" +
                             "\tC - Clubs ♣\t\tH - Hearts ♡") ;
         System.out.print ("\tSelect Suite > ") ;
+        scanner.nextLine() ;
     }
 }

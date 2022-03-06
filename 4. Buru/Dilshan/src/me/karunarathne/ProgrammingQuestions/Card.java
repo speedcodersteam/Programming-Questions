@@ -1,16 +1,25 @@
 package me.karunarathne.ProgrammingQuestions;
 
 public class Card {
-    Suit suit = null ;
-    Rank rank = null ;
+    Suit suit ;
+    Rank rank ;
 
     public Card (Suit suit, Rank rank) {
-
+        this.suit = suit ;
+        this.rank = rank ;
     } 
 
-    public Card (Suit suit, String rank) {
-        
-    } 
+    public static Card [] createDeck () {
+        Card [] deck = new Card [52] ;
+        int counter = 0 ;
+        for (Suit suit: Suit.values()) {
+            for (Rank rank: Rank.values()) {
+                deck [counter] = new Card (suit, rank) ;
+                counter ++ ;
+            }
+        }
+        return deck ;
+    }
 
     @Override
     public String toString() {
@@ -18,14 +27,6 @@ public class Card {
     }
 
     private String generateString () {
-        // return "┌─────────┐\n| " + getLabel () + "      |\n"  + 
-        //         """
-        //     |         |
-        //     |         |
-        //     |         |
-        //         """ +
-        //     "|       " + getLabel () + "|\n└─────────┘ ";
-
         String ascii = """
         ┌─────────┐
         | ##      |

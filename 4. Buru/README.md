@@ -1,22 +1,22 @@
-# Expression Evaluator
+# Buru
 
-### Difficulty: Hard
+### Difficulty: Medium
 
-Write a computer program, that can evaluate any given (basic) mathematical expression. It should be able to read the expression from the user, evaluate it, and print the output.  
+You are assigned to create a console application, that can play the classic Sri Lankan *Buru* game.  
+The game is simple. First, the card pack needs to be shuffled, and divided into two sets. One set goes to the player, and the other set goes to the opponent (in this case, the computer program). The player (user) should be able to request a card. And if that card is in the player's set, the player wins. 
+♠ ♡ ♣ ♢ 
 
 ## Input Format
-The input string should only contain  
-1. Numbers
-2. Basic mathematical operators ( **+ - / \***)
-3. Brackets of type **()**
-4. The numbers can have decimal values.
+The player should be prompted to input a desired playing card. 
 
 ## Constraints
-1. The expression must not contain any operation other than **+ - / \*** . 
-2. All the numbers should be decimal and real. 
+The card pack, should contain all four suits.  
+>(Clubs ♣, Diamonds ♢, Hearts ♡ and Spades ♠)
+And each suit should contain all thirteen cards.   
+>(Ace **A**, King **K**, Queen **Q**, Jack **J**, Ten **10**, Nine **9**, Eight **8**, Seven **7**, Six **6**, Five **5**, Four **4**, Three **3** and Deuce **2**)
 
 ## Output Format
-Print out the result. It should be a number, which may or may not have a decimal part. 
+
 
 ## Sample Input - Output
 On the way....
@@ -36,4 +36,4 @@ Dilshan M. Karunarathne
 <a href="https://fb.com/dilshankarunarathn" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="dilshankarunarathn" height="30" width="40" /></a>
 <a href="https://twitter.com/DilshanKarunar8" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="DilshanKarunar8" height="30" width="40" /></a>
 <a href="https://linkedin.com/in/dilshan-karunarathne-836789225" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="dilshan-karunarathne-836789225" height="30" width="40" /></a>
-> 3<sup>rd</sup> March, 2022
+> 6<sup>th</sup> March, 2022

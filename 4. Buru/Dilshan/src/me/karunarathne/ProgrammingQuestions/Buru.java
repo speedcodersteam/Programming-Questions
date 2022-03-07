@@ -1,5 +1,10 @@
 package me.karunarathne.ProgrammingQuestions ;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
@@ -16,10 +21,11 @@ public class Buru {
     }
 
     public static void play () {
-        
         try {
             scanner = new Scanner(System.in);
             deck = Card.createDeck();
+
+            printTitle () ;
 
             while (true) {
                 if (!mainLoop()) break;
@@ -29,6 +35,15 @@ public class Buru {
         } finally {
             scanner.close() ;
         }
+    }
+
+    private static void printTitle () throws IOException {
+        String title ;
+
+        BufferedReader bufferedReader = new BufferedReader (new FileReader("title.txt")) ;
+        title = bufferedReader.readLine() ;
+
+        println (title, PrintColor.PURPLE) ;
     }
 
     private static boolean mainLoop ()  {

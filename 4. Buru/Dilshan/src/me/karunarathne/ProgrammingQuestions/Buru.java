@@ -1,10 +1,5 @@
 package me.karunarathne.ProgrammingQuestions ;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
@@ -34,16 +29,54 @@ public class Buru {
             e.printStackTrace() ;
         } finally {
             scanner.close() ;
+
+            printFooter () ;
         }
     }
 
-    private static void printTitle () throws IOException {
-        String title ;
-
-        BufferedReader bufferedReader = new BufferedReader (new FileReader("title.txt")) ;
-        title = bufferedReader.readLine() ;
+    private static void printTitle () {
+        String title = """  
+                                                 
+                							Console
+                    ██████╗  ██╗   ██╗ ██████╗  ██╗   ██╗ ██╗    ██╗  █████╗
+                    ██╔══██╗ ██║   ██║ ██╔══██╗ ██║   ██║ ██║    ██║ ██╔══██╗
+                    ██████╔╝ ██║   ██║ ██████╔╝ ██║   ██║ ██║ █╗ ██║ ███████║
+                    ██╔══██╗ ██║   ██║ ██╔══██╗ ██║   ██║ ██║███╗██║ ██╔══██║
+                    ██████╔╝ ╚██████╔╝ ██║  ██║ ╚██████╔╝ ╚███╔███╔╝ ██║  ██║
+                    ╚═════╝   ╚═════╝  ╚═╝  ╚═╝  ╚═════╝   ╚══╝╚══╝  ╚═╝  ╚═╝
+                    All rights reserved			               		    V 1.0
+                    Dilshan M. Karunarathne 				 6 th March, 2022
+                    www.karunarathne.me
+                    github.io/dilshankarunarathne
+                """;
 
         println (title, PrintColor.PURPLE) ;
+    }
+
+    private static void printFooter () {
+        String footer = """
+                                                                            
+                           +@@%.              +@          *@@@:               
+                         -@%: =@@            @@.        :@#   @@               
+                        +@      -@         -@@          @      *@               
+                                 %@      +@@             @@     @:              
+                           .:     @     @@*#@@          @@%@     @              
+                         #@@@@@   @=   @     @@         @@ @     @  @@@@       
+                        *@@@@@@@  @#  @:      @ @@@@.    @@@-    @ *@ =@#      
+                        @@    .@  @%  @       @+   @    @*       @ +   @@       
+                        @      @ .@%  @      .@+  *%   %@        @     @@       
+                        @     .@ @@%  @      @@   @    @@       @@     @@       
+                        @@@@ @@ :@@%  @@-  *@@@  .@     @#    =@@  @   @@       
+                        *@ @ @.+@@@%   @@@@@@@   @@     @@@@@@@@.  +@:@@-      
+                         %@@ .@@@ #%    @@@@.    @@      .@@@@#     @@@+        
+                         :+       #%             @@                             
+                        *@#@      #%             @@@                            
+                        @  .  #@@##%              @@@@                          
+                        @* .@@@-:@@%               ..                           
+                         %@@:     =%                                            
+                
+                """ ;
+        println (footer, PrintColor.RED);
     }
 
     private static boolean mainLoop ()  {
@@ -63,6 +96,7 @@ public class Buru {
         println ("\n\tLet's Play... ", PrintColor.PURPLE) ;
         println ("\tYour card will appear in GREEN", PrintColor.GREEN) ;
         println ("\tYour opponent's card will appear in RED\n", PrintColor.RED) ;
+
         for (Card card: deck) {
             flag ++ ;
             if (isOdd (flag)) {
@@ -70,6 +104,7 @@ public class Buru {
                 if ( card.equals ( selectedCard )) return true ;
             } else {
                 println (card.toString(), PrintColor.RED) ;
+                if ( card.equals ( selectedCard )) return false ;
             }
         }
         return false ;
@@ -80,7 +115,7 @@ public class Buru {
     }
 
     private static Card cardSelector() {
-        println ("\tS - Spades ♠\t\tD - Diamonds ♢\tC - Clubs ♣\t\tH - Hearts ♡", PrintColor.GREEN) ;
+        println ("\tS - Spades ♠\t\tD - Diamonds ♢\t\tC - Clubs ♣\t\tH - Hearts ♡", PrintColor.GREEN) ;
         print ("\tSelect Suite > ", PrintColor.CYAN) ;
         String suite = scanner.nextLine() ;
 

@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 import static me.karunarathne.ProgrammingQuestions.Finder.findRank;
 import static me.karunarathne.ProgrammingQuestions.Finder.findSuite;
+import static me.karunarathne.ProgrammingQuestions.Prints.*;
 
 public class Buru {
     private static ArrayList <Card> deck ;
@@ -20,7 +21,7 @@ public class Buru {
             scanner = new Scanner(System.in);
             deck = Card.createDeck();
 
-            printTitle () ;
+            Prints.printTitle () ;
 
             while (true) {
                 if (!mainLoop()) break;
@@ -33,52 +34,7 @@ public class Buru {
             printFooter () ;
         }
     }
-
-    private static void printTitle () {
-        String title = """  
-                                                 
-                							Console
-                    ██████╗  ██╗   ██╗ ██████╗  ██╗   ██╗ ██╗    ██╗  █████╗
-                    ██╔══██╗ ██║   ██║ ██╔══██╗ ██║   ██║ ██║    ██║ ██╔══██╗
-                    ██████╔╝ ██║   ██║ ██████╔╝ ██║   ██║ ██║ █╗ ██║ ███████║
-                    ██╔══██╗ ██║   ██║ ██╔══██╗ ██║   ██║ ██║███╗██║ ██╔══██║
-                    ██████╔╝ ╚██████╔╝ ██║  ██║ ╚██████╔╝ ╚███╔███╔╝ ██║  ██║
-                    ╚═════╝   ╚═════╝  ╚═╝  ╚═╝  ╚═════╝   ╚══╝╚══╝  ╚═╝  ╚═╝
-                    All rights reserved			               		    V 1.0
-                    Dilshan M. Karunarathne 				 6 th March, 2022
-                    www.karunarathne.me
-                    github.io/dilshankarunarathne
-                """;
-
-        println (title, PrintColor.PURPLE) ;
-    }
-
-    private static void printFooter () {
-        String footer = """
-                                                                            
-                           +@@%.              +@          *@@@:               
-                         -@%: =@@            @@.        :@#   @@               
-                        +@      -@         -@@          @      *@               
-                                 %@      +@@             @@     @:              
-                           .:     @     @@*#@@          @@%@     @              
-                         #@@@@@   @=   @     @@         @@ @     @  @@@@       
-                        *@@@@@@@  @#  @:      @ @@@@.    @@@-    @ *@ =@#      
-                        @@    .@  @%  @       @+   @    @*       @ +   @@       
-                        @      @ .@%  @      .@+  *%   %@        @     @@       
-                        @     .@ @@%  @      @@   @    @@       @@     @@       
-                        @@@@ @@ :@@%  @@-  *@@@  .@     @#    =@@  @   @@       
-                        *@ @ @.+@@@%   @@@@@@@   @@     @@@@@@@@.  +@:@@-      
-                         %@@ .@@@ #%    @@@@.    @@      .@@@@#     @@@+        
-                         :+       #%             @@                             
-                        *@#@      #%             @@@                            
-                        @  .  #@@##%              @@@@                          
-                        @* .@@@-:@@%               ..                           
-                         %@@:     =%                                            
-                
-                """ ;
-        println (footer, PrintColor.RED);
-    }
-
+    
     private static boolean mainLoop ()  {
         Collections.shuffle (deck) ;
 
@@ -124,13 +80,5 @@ public class Buru {
         String rank = scanner.nextLine() ;
 
         return new Card (findSuite (suite), findRank (rank) ) ;
-    }
-
-    private static void println (String stuff, String color) {
-        System.out.println (color + stuff) ;
-    }
-
-    private static void print (String stuff, String color) {
-        System.out.print (color + stuff);
     }
 }

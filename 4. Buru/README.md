@@ -10,12 +10,9 @@ The player should be prompted to input a desired playing card.
 First, let the player choose a suit. And then ask the player to choose a card. 
 
 ## Constraints
-1. The card pack, should contain all four suits.  
-<<<<<<< HEAD
->Clubs ♣, Diamonds ♢, Spades ♠ and Hearts ♡ 
-=======
+1. The card pack, should contain all four suits.
 >Clubs ♣, Diamonds ♢, Hearts ♡ and Spades ♠  
->>>>>>> cd8e4684ebb69f5b24deea37803a58f395d213b7
+  
 2. Each suit should contain all thirteen cards.   
 >Ace **A**, King **K**, Queen **Q**, Jack **J**, Ten **10**, Nine **9**, Eight **8**, Seven **7**, Six **6**, Five **5**, Four **4**, Three **3** and Deuce **2**  
 3. The shuffling must be random. (You are allowed to use the built in functions)
@@ -26,7 +23,7 @@ If the player wins, print out `You won` .
 If the opponent wins, print out `You lost` .
 
 ## Sample Input - Output
-On the way....
+
 ![](outputs.png)
  
 

@@ -34,7 +34,7 @@ public class Buru {
             printFooter () ;
         }
     }
-    
+
     private static boolean mainLoop ()  {
         Collections.shuffle (deck) ;
 

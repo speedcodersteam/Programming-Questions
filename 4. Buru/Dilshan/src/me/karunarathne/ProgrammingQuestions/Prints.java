@@ -30,7 +30,7 @@ public class Prints {
                     ██████╔╝ ╚██████╔╝ ██║  ██║ ╚██████╔╝ ╚███╔███╔╝ ██║  ██║
                     ╚═════╝   ╚═════╝  ╚═╝  ╚═╝  ╚═════╝   ╚══╝╚══╝  ╚═╝  ╚═╝
                     All rights reserved			               		    V 1.2
-                    Dilshan M. Karunarathne 				 6 th March, 2022
+                    Dilshan M. Karunarathne 				 7 th March, 2022
                     www.karunarathne.me
                     github.io/dilshankarunarathne
                 """;

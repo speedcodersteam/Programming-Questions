@@ -6,7 +6,9 @@
       <module fileurl="file://$PROJECT_DIR$/2. Hollow Pyramids/2. Hollow Pyramids.iml" filepath="$PROJECT_DIR$/2. Hollow Pyramids/2. Hollow Pyramids.iml" />
       <module fileurl="file://$PROJECT_DIR$/3. Expression Eval/3. Expression Eval.iml" filepath="$PROJECT_DIR$/3. Expression Eval/3. Expression Eval.iml" />
       <module fileurl="file://$PROJECT_DIR$/4. Buru/4. Buru.iml" filepath="$PROJECT_DIR$/4. Buru/4. Buru.iml" />
+      <module fileurl="file://$PROJECT_DIR$/5. Collatz/5. Collatz.iml" filepath="$PROJECT_DIR$/5. Collatz/5. Collatz.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Programming-Questions.iml" filepath="$PROJECT_DIR$/.idea/Programming-Questions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/5. Collatz/Dilshan/src/src.iml" filepath="$PROJECT_DIR$/5. Collatz/Dilshan/src/src.iml" />
     </modules>
   </component>
 </project>

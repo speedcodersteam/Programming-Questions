@@ -1,6 +1,6 @@
-# Buru
+# Theater
 
-### Difficulty: Medium
+### Difficulty: Hard
 
 The owner of a monopolistic movie theater in a small town has 
 complete freedom in setting ticket prices.  The more he charges, the 
@@ -49,5 +49,7 @@ How to Design Programs, Second Edition [pg. 60.]
 An Introduction to Programming and Computing  
 By Matthias Felleisen, Robert Bruce Findler, Matthew Flatt and Shriram Krishnamurthi  
 <br>
-David Beazley
-https://github.com/dabeaz/theater
+Mentioned by  
+Mr. David Beazley  
+https://github.com/dabeaz/theater  
+At PyCon Sri Lanka 22
